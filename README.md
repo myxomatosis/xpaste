@@ -8,7 +8,7 @@ It can types much faster than a human. Enabling you to using 100+ character root
 Use xpaste to paste whatever is in your copy buffer.
 Use xpastef to paste the contents of a file.
 
-# Dependencies
+## Dependencies
 
 xdotool
 xclip
