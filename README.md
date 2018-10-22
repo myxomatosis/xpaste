@@ -8,7 +8,7 @@ It can types much faster than a human. Enabling you to using 100+ character root
 Use `xpaste` to paste whatever is in your copy buffer excluding line breaks.
 Use `xpastef` to paste the contents of a file including line breaks.
 
-## To install
+## Installation
 ```
 wget -O ~/bin/xpaste https://github.com/myxomatosis/xpaste/raw/master/xpaste
 wget -O ~/bin/xpastef https://github.com/myxomatosis/xpaste/raw/master/xpastef
