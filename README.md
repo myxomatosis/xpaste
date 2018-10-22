@@ -5,8 +5,8 @@ A prime example is when using spice console or VNC console. You have a console t
 This program will work with anything that you can use your keyboard to type into. It does so by selecting the window and mimiking keyboard button hits.
 It can types much faster than a human. Enabling you to using 100+ character root passwords and typing them in at console in just a few seconds.
 
-Use `xpaste` to paste whatever is in your copy buffer excluding line breaks.
-Use `xpastef` to paste the contents of a file including line breaks.
+* Use `xpaste` to paste whatever is in your copy buffer excluding line breaks.
+* Use `xpastef` to paste the contents of a file including line breaks.
 
 ## To install
 ```
