@@ -13,7 +13,7 @@ else
 		fi
 fi
 
-echo "Select window to paste copy buffer"
+echo "Select window to paste $file"
 
 # Set window variable
 window=`xwininfo | grep Window | head -n1 | awk '{print $4}'`
