@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Set file variable
+# Check if a filename was already provided
+if ! [ "$(echo "$@")" == "" ] ; then
+	file="$(echo $@)"
+else
+	# If not let the user choose the file or default to paste.txt
+	echo "What file would you like to paste from [paste.txt]"
+	read file
+		if [ "$(echo $file)" == "" ] ; then
+			file="paste.txt"
+		fi
+fi
+
+echo "Select window to paste copy buffer"
+
+# Set window variable
+window=`xwininfo | grep Window | head -n1 | awk '{print $4}'`
+
+# Change focus to $window
+xdotool windowactivate "$window"
+
+# Paste buffer into selected window with 50 millisecond deley between button pushes
+cat $file | while read line ; do
+	xdotool type --clearmodifiers --delay 50 "$line"
+	xdotool key Return
+done
+
+echo "Paste Complete"

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Select window to paste copy buffer"
+
+# Set window variable
+window=`xwininfo | grep Window | head -n1 | awk '{print $4}'`
+
+# Change focus to $window
+xdotool windowactivate "$window"
+
+# Paste buffer into selected window with 50 millisecond deley between button pushes
+xdotool type --clearmodifiers --delay 50 "$(xclip -o)"
+
+echo "Paste Complete"
