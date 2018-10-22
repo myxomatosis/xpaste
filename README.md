@@ -5,8 +5,8 @@ A prime example is when using spice console or VNC console. You have a console t
 This program will work with anything that you can use your keyboard to type into. It does so by selecting the window and mimiking keyboard button hits.
 It can types much faster than a human. Enabling you to using 100+ character root passwords and typing them in at console in just a few seconds.
 
-Use xpaste to paste whatever is in your copy buffer.
-Use xpastef to paste the contents of a file.
+Use `xpaste` to paste whatever is in your copy buffer excluding line breaks.
+Use `xpastef` to paste the contents of a file including line breaks.
 
 ## To install
 ```
@@ -30,22 +30,23 @@ sudo yum install xdotool xclip
 
 ## Using xpaste and xpastef
 
-xpaste doesn't do line breaks and so is not good with multiple line items
-xpastef does add line breaks but also adds an extra line at the end
+* `xpaste` doesn't do line breaks and so is not good with multiple line items
 
-### xpaste
-To use xpaste just copy what you want to paste to your copy buffer using `control +c`, or any other way you normally do it, then run xpaste.
+* `xpastef` does add line breaks but also adds an extra line at the end
+
+#### xpaste
+To use `xpaste` just copy what you want to paste to your copy buffer using `control +c`, or any other way you normally do it, then run `xpaste`.
 It will prompt for the window to paste in. When you click the window it will immediately start pasting the copy buffer. It does not press the enter key
 in order to avoid accidentally entering passwords or other sensitive data to the wrong window.
 
-### xpastef
-To use xpastef just run `xpastef` or `xpastef somefile.txt`, then select the window where you want to paste the file.  When you click the window it will immediately start
-pasting the selected file to the selected window. It copies line by line hitting enter at the end of each line including the last line. If you run xpastef without
+#### xpastef
+To use `xpastef` just run `xpastef` or `xpastef somefile.txt`, then select the window where you want to paste the file.  When you click the window it will immediately start
+pasting the selected file to the selected window. It copies line by line hitting enter at the end of each line including the last line. If you run `xpastef` without
 including a file to paste it will prompt you to enter the filename at run time.
 
 ## Examples
 
-### xpaste
+#### xpaste
 ```
 example@example ~ $ xpaste
 Select window to paste copy buffer
@@ -53,7 +54,7 @@ Paste Complete
 example@example ~ $ 
 ```
 
-### xpastef
+#### xpastef
 ```
 example@example ~ $ xpastef
 What file would you like to paste from [paste.txt]
